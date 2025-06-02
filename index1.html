@@ -11,6 +11,19 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
 
+    <!-- this is for font awesome...footer part logo of contact us -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- this is for owl carousel  -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+
+
+
+
     <style>
         .column {
             float: left;
@@ -49,6 +62,11 @@
         .site-footer .blockquote-footer {
             font-size: 0.9rem;
             color: black;
+        }
+
+        .site-footer .small {
+            text-align: center;
+
         }
 
         .light {
@@ -103,6 +121,9 @@
             background-color: black;
             color: white;
             padding: 0%;
+            text-align: center;
+            display: flex;
+            justify-content: center;
         }
 
         .olive:hover {
@@ -133,6 +154,13 @@
             text-align: center;
             border-bottom: 2px solid black;
         }
+
+        /* this is for owl carousel */
+        .adjust {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
     </style>
 </head>
 
@@ -145,7 +173,7 @@
             <div class="container-fluid">
                 <div>
                     <a href="index1.html" class="nav-link">
-                        <img src="assets/foodie.png" alt="logo" style="width: 60px; margin: 20px;">
+                        <img src="assets/foodie.png" alt="logo" style="width: 60px; margin: 20px;" class="img-fluid">
                     </a>
                 </div>
                 <pre>   </pre>
@@ -244,14 +272,14 @@
                         <div class="carousel-inner">
                             <div class="carousel-item active" data-bs-interval="10000">
                                 <a href="#">
-                                    <img src="assets/foodies banner.png" class="d-block w-100" alt="healthy food"
+                                    <img src="assets/foodies banner.png" class="img-fluid" alt="healthy food"
                                         style="display: block; margin: auto; height: auto;">
                                 </a>
 
                             </div>
                             <div class="carousel-item" data-bs-interval="2000">
                                 <a href="#">
-                                    <img src="assets/pexels-askar-abayev-5638333.jpg" class="d-block w-100" alt="cusine"
+                                    <img src="assets/pexels-askar-abayev-5638333.jpg" class="img-fluid" alt="cusine"
                                         style="display: block; margin: auto; height: auto">
                                 </a>
                                 <div class="carousel-caption d-none d-md-block">
@@ -261,8 +289,8 @@
                             </div>
                             <div class="carousel-item">
                                 <a href="#">
-                                    <img src="assets/pexels-enginakyurt-2725744.jpg" class="d-block w-100"
-                                        alt="fast food" style="display: block; margin: auto; height: auto;">
+                                    <img src="assets/pexels-enginakyurt-2725744.jpg" class="img-fluid" alt="fast food"
+                                        style="display: block; margin: auto; height: auto;">
                                 </a>
                                 <div class="carousel-caption d-none d-md-block">
                                     <h5>fast food</h5>
@@ -271,7 +299,7 @@
                             </div>
                             <div class="carousel-item">
                                 <a href="#">
-                                    <img src="assets/pexels-ash-craig-122861-376464.jpg" class="d-block w-100"
+                                    <img src="assets/pexels-ash-craig-122861-376464.jpg" class="img-fluid"
                                         alt="fast food" style="display: block; margin: auto; height: auto">
                                 </a>
                                 <div class="carousel-caption d-none d-md-block">
@@ -281,7 +309,7 @@
                             </div>
                             <div class="carousel-item">
                                 <a href="#" class="btn ">
-                                    <img src="assets/pexels-cristian-rojas-8230026.jpg" class="d-block w-100"
+                                    <img src="assets/pexels-cristian-rojas-8230026.jpg" class="img-fluid"
                                         alt="fast food"
                                         style="display: block; margin: auto; height: auto; width: 100%;">
                                 </a>
@@ -330,29 +358,13 @@
                 Recipes start here</h1>
 
             <div class="row g-0">
-                <div class="col-lg-3 col-md-6 col-sm-12" style="padding: 5px;">
-                    <div class="card h-100">
-                        <a href="#" class="btn btn-dark olive">
-                            <img src="assets/Tandoori chicken.jpg" alt="image" class="w-100" style="height: 400px;">
-                        </a>
 
-
-                        <div class="card-body">
-                            <h5 class="card-title">Non-vegeterian food</h5>
-                            <p class="card-text" style="text-align: justify;">Non-vegetarian food includes meat,
-                                poultry, fish, and other
-                                animal-based products. It is rich in protein and commonly found in many global diets.
-                            </p>
-                            <a href="#" class="btn btn-dark olive" style="padding: 5px;">learn more</a>
-                        </div>
-
-                    </div>
-                </div>
 
                 <div class="col-lg-3 col-md-6 col-sm-12" style="padding: 5px;">
                     <div class="card h-100">
-                        <a href="#" class="btn btn-dark olive">
-                            <img src="assets/vegeterian food 1.jpg" alt="image" class="w-100" style="height: 400px;">
+                        <a href="#" class="btn">
+                            <img src="assets/vegeterian food 1.jpg" alt="image" class="img-fluid w-100"
+                                style="height: 400px;">
                         </a>
 
 
@@ -370,8 +382,8 @@
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-12" style="padding: 5px;">
                     <div class="card h-100">
-                        <a href="#" class="btn btn-dark olive">
-                            <img src="assets/pizza.jpg" alt="image" class="w-100" style="height: 400px;">
+                        <a href="#" class="btn">
+                            <img src="assets/pizza.jpg" alt="image" class="img-fluid w-100" style="height: 400px;">
                         </a>
 
                         <div class="card-body">
@@ -388,9 +400,9 @@
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-12" style="padding: 5px;">
                     <div class="card h-100">
-                        <a href="#" class="btn btn-dark olive">
+                        <a href="#" class="btn">
 
-                            <img src="assets/ff burger.jpg" alt="image" class="w-100" style="height: 400px;">
+                            <img src="assets/ff burger.jpg" alt="image" class="img-fluid w-100" style="height: 400px;">
                         </a>
 
                         <div class="card-body">
@@ -405,6 +417,26 @@
 
                     </div>
                 </div>
+                <div class="col-lg-3 col-md-6 col-sm-12" style="padding: 5px;">
+                    <div class="card h-100">
+                        <a href="#" class="btn">
+                            <img src="assets/Tandoori chicken.jpg" alt="image" class="img-fluid w-100"
+                                style="height: 400px;">
+                        </a>
+
+
+                        <div class="card-body">
+                            <h5 class="card-title">Non-vegeterian food</h5>
+                            <p class="card-text" style="text-align: justify;">Non-vegetarian food includes meat,
+                                poultry, fish, and other
+                                animal-based products. It is rich in protein and commonly found in many global diets.
+                            </p>
+                            <a href="#" class="btn btn-dark olive" style="padding: 5px;">learn more</a>
+                        </div>
+
+                    </div>
+                </div>
+
             </div>
         </div><br><br>
 
@@ -428,7 +460,7 @@
                                     <div class="card w-100">
                                         <a href="#" class="btn btn-dark olive">
                                             <img src="assets/pexels-markus-winkler-1430818-3858270.jpg"
-                                                class="card-img-top" alt="Card 1" style="height: auto;">
+                                                class="card-img-top img-fluid" alt="Card 1" style="height: auto;">
                                         </a>
                                         <div class="card-body">
                                             <h5 class="card-title">South Indian</h5>
@@ -456,7 +488,7 @@
                                 <div class="carousel-item">
                                     <div class="card w-100">
                                         <a href="#" class="btn btn-dark olive">
-                                            <img src="assets/pexels-prabal-9609860.jpg" class="card-img-top"
+                                            <img src="assets/pexels-prabal-9609860.jpg" class="card-img-top img-fluid"
                                                 alt="Card 2" style="height: auto;">
                                         </a>
                                         <div class="card-body">
@@ -487,8 +519,8 @@
                                 <div class="carousel-item">
                                     <div class="card w-100">
                                         <a href="#" class="btn btn-dark olive">
-                                            <img src="assets/pexels-chanwalrus-941869.jpg" class="card-img-top"
-                                                alt="Card 3" style="height: auto;">
+                                            <img src="assets/pexels-chanwalrus-941869.jpg"
+                                                class="card-img-top img-fluid" alt="Card 3" style="height: auto;">
                                         </a>
                                         <div class="card-body">
                                             <h5 class="card-title">South Indian Dishes</h5>
@@ -546,102 +578,113 @@
         <!-- The images sections are start forom here -->
 
 
-        <div class="container">
-            <div style="margin: 2px 2px 2px 2px;">
-                <div class="row">
-                    <div class="col-lg-6 col-md-12 col-sm-12">
+        <div class="container-fluid">
+
+            <div class="row">
+                <div class="col-lg-6 col-md-12 col-sm-12">
+                    <div>
                         <h1
                             style="text-align: center; text-decoration: underline 2px solid black; border: 1px solid black; background-color: black; color: white;">
                             Special Thali</h1>
-                        <a href="#" class="btn btn-dark olive">
-                            <img src="assets/delicious-food-table.jpg" alt="south indian" style="height: 500px;"
-                                class="w-100">
-                        </a>
+                    </div>
+                    <a href="#" class="btn btn-dark olive">
+                        <img src="assets/delicious-food-table.jpg" alt="south indian" style="height: 500px;"
+                            class="img-fluid">
+                    </a>
 
-                    </div>
-                    <div class="col-lg-6 col-md-12 col-sm-12">
+                </div>
+                <div class="col-lg-6 col-md-12 col-sm-12">
+                    <div>
                         <h1
-                            style="text-align: center; margin-top: 10px; text-decoration: underline 2px solid black; border: 1px solid black; background-color: black; color: white;">
+                            style="text-align: center;  text-decoration: underline 2px solid black; border: 1px solid black; background-color: black; color: white;">
                             Healthy Food</h1>
-                        <a href="#" class="btn btn-dark olive">
-                            <img src="assets/pexels-janetrangdoan-1092730.jpg" alt="rissole" style="height: 500px;"
-                                class="w-100">
-                        </a>
                     </div>
+                    <a href="#" class="btn">
+                        <img src="assets/healthy food1.jpg" alt="rissole" style="height: 500px;" class="img-fluid">
+                    </a>
                 </div>
             </div>
+
         </div><br><br><br>
 
 
-        <!-- This is a container which contains the image and text -->
-        <!-- <div class="container-fluid " style="border: 2px solid black; margin: 20px;">
-            <div class="row container-secction" style="text-align: justify;">
-                <div class="col-6" style="background-color: white; color: black ">
-                    <div class="row">
-                        <div class="col-6">
-                            <a href="#" class="btn btn-dark olive">
-                            <img src="assets/jalebi.jpg" alt="image" class="w-100">
-                            </a>
-                        </div>
-                        <div class="col-6">
-                            <h3 style="text-align: center; text-decoration: underline;">Sweets</h3>
-                            <p>Sweets are delicious food items that are typically high in sugar and enjoyed as desserts
-                                or snacks. They include treats like cakes, chocolates, candies, pastries, and
-                                traditional confections such as laddoos, jalebis, or baklava, depending on the culture.
-                                Sweets are often associated with celebrations, festivals, and special occasions,
-                                bringing joy and indulgence. While they are tasty, it's important to consume them in
-                                moderation due to their high sugar and calorie content.</p>
-                            <p>
-                                While sweets are often considered a guilty pleasure, many cultures have developed
-                                healthier versions using natural sweeteners like honey, jaggery, or dates. Some sweets
-                                also include nutritious ingredients such as nuts, dried fruits, and whole grains, adding
-                                texture and health benefits. Homemade or traditional sweets can offer a more wholesome
-                                alternative to mass-produced candies, allowing for better control over ingredients.
-                                Despite their appeal, mindful consumption is key to enjoying sweets as part of a
-                                balanced diet.
 
+
+
+        <!-- this is for owl carousel -->
+        <section class="container-fluid">
+            <div class="text-center">
+                <h1
+                    style="text-align: center; text-decoration: underline 2px solid black; color: white; border: 2px solid black; background-color: black; ">
+                    Best Sellers
+                </h1>
+            </div><br>
+            <div class="owl-carousel">
+
+                
+                    <div class="card adjust">
+                        <img src="assets/pasta.jpg" class="card-img-top img-fluid w-100" alt="" style="height: 400px;">
+                        <div class="card-body">
+                            <h5 class="card-title">Pasta</h5>
+                            <p class="card-text">Pasta is a traditional Italian food made from wheat and water,
+                                often served with sauces. It comes in various shapes like spaghetti or penne,
+                                offering endless delicious meal possibilities.
                             </p>
-                            <a href="#" class="btn btn-dark olive" style="padding: 5px;">more</a>
+                            <a href="#" class="btn olive">learn more</a>
                         </div>
                     </div>
-                </div>
 
-                <div class="col-6" style="background-color: white; color: black; border-left: 2px solid black;">
-                    <div class="row">
 
-                        <div class="col-6">
-                            <h3 style="text-align: center; text-decoration: underline;">Healthier Food</h3>
-                            <p>Healthy food consists of nutritious items that support overall well-being and bodily
-                                function. It includes fruits, vegetables, whole grains, lean proteins, nuts, and healthy
-                                fats. These foods are rich in vitamins, minerals, fiber, and antioxidants, which help
-                                maintain energy levels, boost immunity, and prevent chronic diseases. A balanced diet of
-                                healthy foods promotes a strong body and mind and contributes to a better quality of
-                                life.</p>
-                            <p>
-                                Healthy eating doesn't mean sacrificing flavor or variety; in fact, it opens the door to
-                                a wide range of delicious options. Dishes made with fresh herbs, spices, and seasonal
-                                produce can be both satisfying and nourishing. With growing awareness, more people are
-                                turning to plant-based diets, organic ingredients, and home-cooked meals to maintain
-                                health. Incorporating healthy food into daily routines can lead to long-term benefits
-                                such as improved mood, better sleep, and sustained energy throughout the day.
+                    <div class="card adjust">
+                        <img src="assets/burger& french fries.jpg" class="card-img-top img-fluid w-100" alt=""
+                            style="height: 400px;">
+                        <div class="card-body">
+                            <h5 class="card-title">Burgers & French Fries</h5>
+                            <p class="card-text">Burgers and French fries are classic fast food favorites. Juicy
+                                beef patties in buns paired with crispy, salted fries create a satisfying, flavorful
+                                meal loved worldwide for its convenience and taste.
+                            </p>
+                            <a href="#" class="btn olive">learn more</a>
+                        </div>
+
+                    </div>
+
+                    <div class="card adjust">
+                        <img src="assets/healthy food3.jpg" class="card-img-top img-fluid w-100" alt=""
+                            style="height: 400px;">
+                        <div class="card-body">
+                            <h5 class="card-title">Healthy Food</h5>
+                            <p class="card-text">Healthy food includes fruits, vegetables, whole grains, and lean
+                                proteins. It provides essential nutrients, supports energy and immunity, reduces
+                                disease risk, and promotes overall well-being and a balanced lifestyle.
 
                             </p>
-                            <a href="#" class="btn btn-dark olive" style="padding: 5px;">more</a>
-                        </div>
-                        <div class="col-6 ">
-                            <a href="#" class="btn btn-dark olive">
-                            <img src="assets/healthy.jpg" alt="image" class="w-100">
-                            </a>
+                            <a href="#" class="btn olive">learn more</a>
                         </div>
                     </div>
-                </div>
+
+
+                    <div class="card adjust">
+                        <img src="assets/spaghetti.jpg" class="card-img-top img-fluid w-100" style="height: 400px;">
+                        <div class="card-body">
+                            <h5 class="card-title">Spaghetti</h5>
+                            <p class="card-text">Spaghetti is a long, thin pasta popular in Italian cuisine. Often
+                                served with tomato sauce, meatballs, or cheese, it’s a versatile, delicious dish
+                                enjoyed by people around the world.
+
+                            </p>
+                            <a href="#" class="btn olive">learn more</a>
+                        </div>
+                    </div>
+                
+
             </div>
-        </div><br><br> -->
+        </section><br><br>
 
 
 
         <!-- This is the card section 
-     First row-->
+     First row -->
         <div class="container-fluid">
             <div class="row">
                 <h1
@@ -655,7 +698,7 @@
                         <div class="card-body">
                             <div>
                                 <a href="#" class="btn btn-dark olive">
-                                    <img src="assets/indian chole bhature" alt="Chole Bhature"
+                                    <img src="assets/indian chole bhature" alt="Chole Bhature" class="img-fluid"
                                         style="height: 230px; width: 100%;">
                                 </a>
                             </div>
@@ -677,7 +720,7 @@
                         <div class="card-body">
                             <div>
                                 <a href="#" class="btn btn-dark olive">
-                                    <img src="assets/indian biryani.jpg" alt="Biryani"
+                                    <img src="assets/indian biryani.jpg" alt="Biryani" class="img-fluid"
                                         style="height: 230px; width: 100%;">
                                 </a>
                             </div>
@@ -697,7 +740,8 @@
                         <div class="card-body">
                             <div>
                                 <a href="#" class="btn btn-dark olive">
-                                    <img src="assets/indian dosa.jpg" alt="Dosa" style="height: 230px; width: 100%;">
+                                    <img src="assets/indian dosa.jpg" alt="Dosa" class="img-fluid"
+                                        style="height: 230px; width: 100%;">
                                 </a>
                             </div>
                             <h5 class="card-title">Dosa</h5>
@@ -715,7 +759,8 @@
                         <div class="card-body">
                             <div>
                                 <a href="#" class="btn btn-dark olive">
-                                    <img src="assets/indian-poha.jpg" alt="Poha" style="height: 230px; width: 100%;">
+                                    <img src="assets/indian-poha.jpg" alt="Poha" class="img-fluid"
+                                        style="height: 230px; width: 100%;">
                                 </a>
                             </div>
                             <h5 class="card-title">Poha</h5>
@@ -747,7 +792,8 @@
                         <div class="card-body">
                             <div>
                                 <a href="#" class="btn btn-dark olive">
-                                    <img src="assets/italian-pasta.jpg" alt="" style="height: 230px; width: 100%;">
+                                    <img src="assets/italian-pasta.jpg" class="img-fluid"
+                                        style="height: 230px; width: 100%;">
                                 </a>
                             </div>
                             <h5 class="card-title">Penne Pasta</h5>
@@ -767,7 +813,8 @@
                         <div class="card-body">
                             <div>
                                 <a href="#" class="btn btn-dark olive">
-                                    <img src="assets/italian-pizza.jpg" alt="" style="height: 230px; width: 100%;">
+                                    <img src="assets/italian-pizza.jpg" class="img-fluid"
+                                        style="height: 230px; width: 100%;">
                                 </a>
                             </div>
                             <h5 class="card-title">Vegetarian Pizza</h5>
@@ -787,7 +834,8 @@
                         <div class="card-body">
                             <div>
                                 <a href="#" class="btn btn-dark olive">
-                                    <img src="assets/italian-spaghetti.jpg" alt="" style="height: 230px; width: 100%;">
+                                    <img src="assets/italian-spaghetti.jpg" class="img-fluid"
+                                        style="height: 230px; width: 100%;">
                                 </a>
                             </div>
                             <h5 class="card-title">Spaghetti</h5>
@@ -805,7 +853,8 @@
                         <div class="card-body">
                             <div>
                                 <a href="#" class="btn btn-dark olive">
-                                    <img src="assets/italian tiramisu1.jpg" alt="" style="height: 230px; width: 100%;">
+                                    <img src="assets/italian tiramisu1.jpg" class="img-fluid"
+                                        style="height: 230px; width: 100%;">
                                 </a>
                             </div>
                             <h5 class="card-title">Tiramisu</h5>
@@ -838,7 +887,8 @@
                         <div class="card-body">
                             <div>
                                 <a href="#" class="btn btn-dark olive">
-                                    <img src="assets/chinease chowmein.jpg" alt="" style="height: 230px; width: 100%;">
+                                    <img src="assets/chinease chowmein.jpg" class="img-fluid"
+                                        style="height: 230px; width: 100%;">
                                 </a>
                             </div>
                             <h5 class="card-title">Hakka Noodles</h5>
@@ -858,7 +908,8 @@
                         <div class="card-body">
                             <div>
                                 <a href="#" class="btn btn-dark olive">
-                                    <img src="assets/chinease dim sum.jpg" alt="" style="height: 230px; width: 100%;">
+                                    <img src="assets/chinease dim sum.jpg" class="img-fluid"
+                                        style="height: 230px; width: 100%;">
                                 </a>
                             </div>
                             <h5 class="card-title">Steamed Dumplings</h5>
@@ -877,7 +928,7 @@
                         <div class="card-body">
                             <div>
                                 <a href="#" class="btn btn-dark olive">
-                                    <img src="assets/chinease fried rice.jpg" alt=""
+                                    <img src="assets/chinease fried rice.jpg" class="img-fluid"
                                         style="height: 230px; width: 100%;">
                                 </a>
                             </div>
@@ -897,7 +948,8 @@
                         <div class="card-body">
                             <div>
                                 <a href="#" class="btn btn-dark olive">
-                                    <img src="assets/chinease tofu.jpg" alt="" style="height: 230px; width: 100%;">
+                                    <img src="assets/chinease tofu.jpg" class="img-fluid"
+                                        style="height: 230px; width: 100%;">
                                 </a>
                             </div>
                             <h5 class="card-title">Tofu Stir Fry</h5>
@@ -910,9 +962,6 @@
                         </div>
                     </div>
                 </div>
-
-
-
             </div>
         </div><br><br>
 
@@ -923,7 +972,7 @@
             <div class="row gy-5">
                 <h1
                     style="text-align: center; text-decoration: underline 2px solid black; color: white; border: 2px solid black; background-color: black;">
-                    Trending Dishes</h1>
+                    Dishes</h1>
                 <div class="col-lg-6 col-md-6 col-sm-12">
                     <div class="p-3">
                         <a href="#" class="btn btn-dark olive">
@@ -980,14 +1029,14 @@
     <footer class="site-footer ">
         <div class="container-fluid py-5 ">
             <div class="row">
-                <div class="col-12 col-md-4 col-lg-3 mb-4">
+                <div class="col col-md-4 col-lg-3 mb-4">
                     <h5 class="text-uppercase">Recipes</h5>
                     <p class="small">
                         Food is essential for life, providing the energy and nutrients our bodies need to function.
                         It also brings people together, offering enjoyment, comfort, and cultural connection.
                     </p>
                 </div>
-                <div class="col-6 col-md-4 col-lg-3 mb-4">
+                <div class="col col-md-4 col-lg-3 mb-4">
                     <h5 class="text-uppercase">Section</h5>
                     <ul class="list-unstyled small">
                         <li><a href="#" class="text-light text-decoration-none">Home</a></li>
@@ -997,7 +1046,7 @@
                         <li><a href="#" class="text-light text-decoration-none">Personal Touch</a></li>
                     </ul>
                 </div>
-                <div class="col-6 col-md-4 col-lg-3 mb-4">
+                <div class="col col-md-4 col-lg-3 mb-4">
                     <h5 class="text-uppercase">Community</h5>
                     <ul class="list-unstyled small">
                         <li><a href="#" class="text-light text-decoration-none">Call to Action</a></li>
@@ -1005,6 +1054,27 @@
                         <li><a href="#" class="text-light text-decoration-none">Sponsors</a></li>
                         <li><a href="#" class="text-light text-decoration-none">Positive Message</a></li>
                         <li><a href="#" class="text-light text-decoration-none">Customer Care</a></li>
+                    </ul>
+                </div>
+                <div class="col col-md-4 col-lg-3 mb-4">
+                    <h5 class="text-uppercase"><i class="fa fa-circle-user"> Contact Us</i></h5>
+                    <ul class="list-unstyled small">
+                        <li><a href="#" class="text-light text-decoration-none">
+                                <i class="fa fa-phone"> 9770586482</i>
+                            </a></li>
+                        <li><a href="#" class="text-light text-decoration-none">
+                                <i class="fa-brands fa-whatsapp"> 9770586482</i>
+                            </a></li>
+                        <li><a href="#" class="text-light text-decoration-none">
+                                <i class="fa-brands fa-instagram"> Foodies</i>
+                            </a></li>
+
+                        <li><a href="#" class="text-light text-decoration-none">
+                                <i class="fa-brands fa-facebook"> Foodies</i>
+                            </a></li>
+                        <li><a href="#" class="text-light text-decoration-none">
+                                <i class="fas fa-info-circle"> Customer Care</i>
+                            </a></li>
                     </ul>
                 </div>
             </div>
@@ -1027,6 +1097,28 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
         integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
         crossorigin="anonymous"></script>
+
+    <!-- this is for owl carousel script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $(".owl-carousel").owlCarousel({
+                loop: true,
+                autoplay: true,
+                margin: 20,
+                nav: true,
+                dots: true,
+                responsive: {
+                    0: { items: 1 },
+                    600: { items: 2 },
+                    1000: { items: 3 }
+                }
+            });
+        });
+
+    </script>
 
 </body>
 
