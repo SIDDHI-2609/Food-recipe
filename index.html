@@ -1,88 +1,1241 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <title>Recipe Website</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Foodies The Taste Of India</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="keywords"
+        content="foodies, indian dishes, italian dishes, chinease dishes, cuisines, vegeterian foods, Non-vegetarian foods, foods,indian thali, south indian thali, north indian thali, cuisines, fast foods, healthy food">
+    <meta name="description"
+        content="Discover a world of delicious flavors with our curated collection of mouthwatering recipes and food inspirations. Whether you're craving comfort food or exploring new cuisines, we have something for every taste. Fresh ingredients, easy steps, and unforgettable meals await!">
+    
+    <link rel="shortcut icon" href="assets/foodie.ico">
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-  <style>
-    body,
-    html {
-      height: 100%;
-      margin: 0;
-      padding: 0;
-      background: url('assets/back-ground.png') no-repeat center center-fixed;
-      background-size: cover;
-    }
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
 
-    .centered-container {
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      background-color: rgba(116, 112, 112, 0.7);
-      /* optional white overlay */
-      padding: 20px;
-      text-align: center;
-    }
+    <!-- this is for font awesome...footer part logo of contact us -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    .logo {
-      width: 120px;
-      height: auto;
-      margin-bottom: 20px;
-    }
+    <!-- this is for owl carousel  -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
 
-    .center-heading {
-      font-size: 2rem;
-      font-weight: bold;
-      margin-bottom: 10px;
-    }
 
-    .link-section a {
-      margin-top: 10px;
-      font-size: 1rem;
-    }
 
-    .center {
-      text-align: center;
-      font-style: italic;
-    }
 
-    body {
-      background-image: url('assets/back-ground.png');
-      background-size: cover;
-      background-position: center;
-    }
-  </style>
+    <style>
+        .column {
+            float: left;
+            width: 50%;
+        }
+
+        .width {
+            width: 50%;
+        }
+
+        .card {
+            height: 100%;
+            margin: 0%;
+            padding: 0%;
+
+        }
+
+        /* this is for footer section */
+        .site-footer {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: black;
+            color: white;
+        }
+
+        .site-footer a:hover {
+            color: #ffc107;
+            /* Golden hover */
+            text-decoration: underline;
+        }
+
+        .site-footer h5 {
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .site-footer .blockquote-footer {
+            font-size: 0.9rem;
+            color: black;
+        }
+
+        .site-footer .small {
+            text-align: center;
+
+        }
+
+        .light {
+            color: black;
+        }
+
+        /* this is style of link section */
+        .link-section {
+            background-color: white;
+            border: 5px 5px 5px 5px;
+
+        }
+
+        .section-title {
+            text-align: center;
+            text-decoration: underline;
+            margin: 5px;
+            padding: 5px;
+
+        }
+
+        .link-grid {
+
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+
+        }
+
+        .link-box {
+            display: block;
+            color: black;
+            background-color: white;
+            padding: 12px;
+        }
+
+        .link-box:hover {
+            color: white;
+            background-color: black;
+        }
+
+
+        /* this style is for card section */
+        /* .card-body {
+            background-color: #efe7e0;
+            color: #6a2c2b;
+        } */
+
+        .olive {
+
+            background-color: black;
+            color: white;
+            padding: 0%;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            
+        }
+
+        .olive:hover {
+            color: black;
+            background-color: white;
+        }
+
+        /* this is for search button */
+        .cream {
+            background-color: white;
+            color: black;
+        }
+
+        .cream:hover {
+            background-color: black;
+            color: white;
+        }
+
+        h2 {
+            text-align: center;
+            text-decoration: underline;
+            color: white;
+            display: flex;
+            flex-direction: column;
+        }
+
+        h5 {
+            text-align: center;
+            border-bottom: 2px solid black;
+        }
+
+        /* this is for owl carousel */
+        .adjust {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+
+        /* this is for hover effect of image in dishes section */
+
+        .hovereffect {
+  width: 100%;
+  height: 100%;
+  float: left;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  cursor: default;
+}
+
+.hovereffect .overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0.6);
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -webkit-transform: translate(460px, -100px) rotate(180deg);
+  -ms-transform: translate(460px, -100px) rotate(180deg);
+  transform: translate(460px, -100px) rotate(180deg);
+  -webkit-transition: all 0.2s 0.4s ease-in-out;
+  transition: all 0.2s 0.4s ease-in-out;
+}
+
+.hovereffect img {
+  display: block;
+  position: relative;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+  height: 450px;
+  width: 100%;
+  margin: 20px 20px 20px 20px;
+  
+}
+
+.hovereffect h2 {
+  text-transform: uppercase;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  font-size: 17px;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.hovereffect a.info {
+  display: inline-block;
+  text-decoration: none;
+  padding: 7px 14px;
+  text-transform: uppercase;
+  color: #fff;
+  border: 1px solid #fff;
+  margin: 50px 0 0 0;
+  background-color: transparent;
+  -webkit-transform: translateY(-200px);
+  -ms-transform: translateY(-200px);
+  transform: translateY(-200px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.hovereffect a.info:hover {
+  box-shadow: 0 0 5px #fff;
+}
+
+.hovereffect:hover .overlay {
+  opacity: 1;
+  filter: alpha(opacity=100);
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+  -webkit-transform: translate(0px, 0px);
+  -ms-transform: translate(0px, 0px);
+  transform: translate(0px, 0px);
+}
+
+.hovereffect:hover h2 {
+  -webkit-transform: translateY(0px);
+  -ms-transform: translateY(0px);
+  transform: translateY(0px);
+  -webkit-transition-delay: 0.5s;
+  transition-delay: 0.5s;
+}
+
+.hovereffect:hover a.info {
+  -webkit-transform: translateY(0px);
+  -ms-transform: translateY(0px);
+  transform: translateY(0px);
+  -webkit-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+}
+
+/* this is for button of bestsellers(owl carousel) */
+.custom{
+    height: 35px;
+    width: 100%;
+}
+
+    </style>
 </head>
 
-<body>
+<body style="background-color: white;">
+
+    <header>
+        <!-- place navbar here -->
+        <!--this is a navigation bar-->
+        <nav class="navbar navbar-expand-lg" style="background-color: black;">
+            <div class="container-fluid">
+                <div>
+                    <a href="index1.html" class="nav-link">
+                        <img src="assets/foodie.png" alt="logo" style="width: 60px; margin: 20px;" class="img-fluid">
+                    </a>
+                </div>
+                <pre>   </pre>
+                <a class="navbar-brand" href="food.html"
+                    style="display: block; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; color: white;">Food's</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#" style="color: white;">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                style="color: white;" aria-expanded="false">
+                                links
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">vegetarian section</a></li>
+                                <li><a class="dropdown-item" href="#">Non-vegetarian</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                style="color: white;" aria-expanded="false">
+                                Recipes
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">vegetarian section</a></li>
+                                <li><a class="dropdown-item" href="#">Non-vegetarian</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                style="color: white;" aria-expanded="false">
+                                cusines
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">...</a></li>
+                                <li><a class="dropdown-item" href="#">...</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" aria-disabled="true" style="color: white;">Disabled</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                        <button class="btn cream" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- the header ends here -->
 
 
-  <div class="centered-container">
-    <div class="animate__animated animate__backInDown animate__faster center">
-      <h1>Foodie's <br>
-        <h4>~The Taste Of India</h4>
-      </h1>
-    </div><br>
-
-    <!-- Logo -->
-    <img src="assets/foodie.png" alt="Logo" class="logo">
-    
+    <main>
 
 
-    <!-- Heading -->
-    <h2 class="center-heading">Recipes Start Here</h2>
+        <!-- The carousel part start from here -->
 
-    <!-- Link Section -->
-    <div class="link-section">
-      <a href="index1.html" target="_blank" class="btn btn-outline-dark"
-        style="background-color: black; color: white;">Visit Main Recipe Site</a>
+
+        <div id="carouselExampleDark" class="carousel carousel-dark slide">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active olive"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" class="olive"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" class="olive"
+                    aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" class="olive"
+                    aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="4" class="olive"
+                    aria-label="Slide 5"></button>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active" data-bs-interval="10000">
+                                <a href="#">
+                                    <img src="assets/foodies banner.png" class="img-fluid" alt="healthy food"
+                                        style="display: block; margin: auto; height: auto;">
+                                </a>
+
+                            </div>
+                            <div class="carousel-item" data-bs-interval="2000">
+                                <a href="#">
+                                    <img src="assets/pexels-askar-abayev-5638333.jpg" class="img-fluid" alt="cusine"
+                                        style="display: block; margin: auto; height: auto">
+                                </a>
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>cuisines</h5>
+                                    <p>the cuisine section are here.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <a href="#">
+                                    <img src="assets/pexels-enginakyurt-2725744.jpg" class="img-fluid" alt="fast food"
+                                        style="display: block; margin: auto; height: auto;">
+                                </a>
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>fast food</h5>
+                                    <p>The fast food are here.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <a href="#">
+                                    <img src="assets/pexels-ash-craig-122861-376464.jpg" class="img-fluid"
+                                        alt="fast food" style="display: block; margin: auto; height: auto">
+                                </a>
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>sweet cusines</h5>
+                                    <p>The fast food are here.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <a href="#" class="btn ">
+                                    <img src="assets/pexels-cristian-rojas-8230026.jpg" class="img-fluid"
+                                        alt="fast food"
+                                        style="display: block; margin: auto; height: auto; width: 100%;">
+                                </a>
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>Diet food</h5>
+                                    <p>The diet food section are here.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" class="olive"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" class="olive"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">next</span>
+                </button>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" class="olive"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">next</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" class="olive"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">next</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" class="olive"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">next</span>
+            </button>
+
+        </div><br><br><br>
+
+
+        <!-- The card sections are start from here -->
+        <div class="container-fluid">
+            <h1
+                style="text-align: center; text-decoration: underline 2px solid black; border: 1px solid black; background-color: black; color: white;">
+                Recipes start here</h1>
+
+            <div class="row g-0">
+
+
+                <div class="col-lg-3 col-md-6 col-sm-12" style="padding: 5px;">
+                    <div class="card h-100">
+                        <a href="#" class="btn">
+                            <img src="assets/vegeterian food 1.jpg" alt="image" class="img-fluid w-100"
+                                style="height: 400px;">
+                        </a>
+
+
+                        <div class="card-body">
+                            <h5 class="card-title">Vegetarian food </h5>
+                            <p class="card-text" style="text-align: justify;">Vegetarian food excludes meat and fish,
+                                focusing on vegetables, grains,
+                                fruits, legumes, and dairy. It promotes a plant-based lifestyle often associated with
+                                health benefits.
+                            </p>
+                            <a href="#" class="btn btn-dark olive" style="padding: 5px;">learn more</a>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12" style="padding: 5px;">
+                    <div class="card h-100">
+                        <a href="#" class="btn">
+                            <img src="assets/pizza.jpg" alt="image" class="img-fluid w-100" style="height: 400px;">
+                        </a>
+
+                        <div class="card-body">
+                            <h5 class="card-title">Cuisines</h5>
+                            <p class="card-text" style="text-align: justify;">Cuisines are distinctive styles of cooking
+                                associated with specific
+                                cultures or regions. They reflect local ingredients, traditions, and culinary
+                                techniques.
+                            </p>
+                            <a href="#" class="btn btn-dark olive" style="padding: 5px;">learn more</a>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12" style="padding: 5px;">
+                    <div class="card h-100">
+                        <a href="#" class="btn">
+
+                            <img src="assets/ff burger.jpg" alt="image" class="img-fluid w-100" style="height: 400px;">
+                        </a>
+
+                        <div class="card-body">
+                            <h5 class="card-title">Fast food</h5>
+                            <p class="card-text" style="text-align: justify;">Fast food refers to quickly prepared and
+                                served meals, often from chain
+                                restaurants. It's known for convenience, affordability, and items like burgers, fries,
+                                and pizzas.
+                            </p>
+                            <a href="#" class="btn btn-dark olive" style="padding: 5px;">learn more</a>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12" style="padding: 5px;">
+                    <div class="card h-100">
+                        <a href="#" class="btn">
+                            <img src="assets/Tandoori chicken.jpg" alt="image" class="img-fluid w-100"
+                                style="height: 400px;">
+                        </a>
+
+
+                        <div class="card-body">
+                            <h5 class="card-title">Non-vegeterian food</h5>
+                            <p class="card-text" style="text-align: justify;">Non-vegetarian food includes meat,
+                                poultry, fish, and other
+                                animal-based products. It is rich in protein and commonly found in many global diets.
+                            </p>
+                            <a href="#" class="btn btn-dark olive" style="padding: 5px;">learn more</a>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div><br><br>
+
+
+
+        <!-- The card carousel are start from here -->
+
+
+
+        <div class="container py-5">
+            <div id="cardCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-12 col-md-12 col-sm-12">
+                            <div class="carousel-inner">
+                                <h1
+                                    style="text-align: center; text-decoration: underline; border: 2px solid black; background-color: black; color: white;">
+                                    Indian Thali</h1>
+                                <div class="carousel-item active">
+                                    <div class="card w-100">
+
+                                        <a href="#" class="btn btn-dark olive">
+                                            <img src="assets/pexels-markus-winkler-1430818-3858270.jpg"
+                                                class="card-img-top img-fluid" alt="Card 1"
+                                                style="height: auto; object-fit: contain;">
+                                        </a>
+
+
+                                        <div class="card-body">
+                                            <h5 class="card-title">South Indian</h5>
+                                            <p class="card-text">A South Indian thali is a traditional and wholesome
+                                                meal that showcases the rich culinary diversity of South India. Served
+                                                on a
+                                                banana leaf or a stainless steel plate with multiple small bowls, it
+                                                typically
+                                                includes a harmonious
+                                                combination of rice, sambar (a lentil-based vegetable stew), rasam
+                                                (a
+                                                tangy, peppery
+                                                soup), poriyal (stir-fried vegetables), kootu (vegetables with
+                                                lentils),
+                                                curd
+                                                (yogurt), and pickles. Each item on the thali offers a different
+                                                flavor
+                                                profile—spicy, tangy, sweet, and savory—providing a balanced and
+                                                satisfying meal.
+                                                The use of ingredients like mustard seeds, curry leaves, coconut,
+                                                and
+                                                tamarind gives
+                                                South Indian cuisine its distinctive taste and aroma.</p>
+                                        </div>
+                                        <a href="#" class="btn btn-dark olive" style="padding: 5px;">more</a>
+                                    </div>
+                                </div>
+
+                                <div class="carousel-item">
+                                    <div class="card w-100">
+                                        <a href="#" class="btn btn-dark olive">
+                                            <img src="assets/pexels-prabal-9609860.jpg" class="card-img-top img-fluid"
+                                                alt="Card 2" style="height: auto;">
+                                        </a>
+                                        <div class="card-body">
+                                            <h5 class="card-title">North Indian Thali</h5>
+                                            <p class="card-text">A North Indian thali is a vibrant and hearty platter
+                                                that reflects
+                                                the rich culinary traditions of northern India. Typically served on a
+                                                large round
+                                                plate with several small bowls, it features a variety of dishes such as
+                                                dal
+                                                (lentils), sabzi (vegetable preparations), paneer (cottage cheese
+                                                curry), raita
+                                                (yogurt with herbs or vegetables), pickles, and sweets. The meal is
+                                                usually
+                                                accompanied by roti, naan, or paratha (types of Indian bread), as well
+                                                as rice. The
+                                                flavors tend to be robust, with generous use of spices like cumin,
+                                                coriander, garam
+                                                masala, and turmeric, offering a delightful balance of spicy, tangy, and
+                                                creamy
+                                                tastes.
+                                            </p>
+                                        </div>
+                                        <a href="#" class="btn btn-dark olive" style="padding: 5px;">more</a>
+                                    </div>
+                                </div>
+
+                                <div class="carousel-item">
+                                    <div class="card w-100">
+                                        <a href="#" class="btn btn-dark olive">
+                                            <img src="assets/pexels-chanwalrus-941869.jpg"
+                                                class="card-img-top img-fluid" alt="Card 3" style="height: auto;">
+                                        </a>
+                                        <div class="card-body">
+                                            <h5 class="card-title">South Indian Dishes</h5>
+                                            <p class="card-text">South Indian cuisine is known for its bold flavors,
+                                                aromatic
+                                                spices, and healthy ingredients, with rice, lentils, and coconut forming
+                                                the core of
+                                                many dishes. Popular breakfast items include idli (steamed rice cakes),
+                                                dosa (crispy
+                                                rice and lentil crepes), and upma (a savory semolina porridge), often
+                                                served with
+                                                sambar and a variety of chutneys made from coconut, tomato, or mint.
+                                                Meals are
+                                                typically light yet filling, using techniques like steaming and minimal
+                                                oil frying.
+                                                Spices such as mustard seeds, curry leaves, dried red chilies, and
+                                                asafoetida are
+                                                used to temper dishes, adding depth and fragrance.
+                                            </p>
+                                        </div>
+                                        <a href="#" class="btn btn-dark olive" style="padding: 5px;">more</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Controls -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#cardCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                    <span class="visually-hidden">prev</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#cardCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                    <span class="visually-hidden">next</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#cardCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                    <span class="visually-hidden">next</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#cardCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                    <span class="visually-hidden">next</span>
+                </button>
+
+
+            </div>
+        </div><br><br><br>
+
+
+
+
+        <!-- The images sections are start forom here -->
+
+
+        <div class="container-fluid">
+
+            <div class="row">
+                <div class="col-lg-6 col-md-12 col-sm-12">
+                    <div>
+                        <h1
+                            style="text-align: center; text-decoration: underline 2px solid black; border: 1px solid black; background-color: black; color: white;">
+                            Special Thali</h1>
+                    </div>
+                    <a href="#" class="btn btn-dark olive">
+                        <img src="assets/delicious-food-table.jpg" alt="south indian" style="height: 400px;"
+                            class="img-fluid">
+                    </a>
+
+                </div>
+                <div class="col-lg-6 col-md-12 col-sm-12">
+                    <div>
+                        <h1
+                            style="text-align: center;  text-decoration: underline 2px solid black; border: 1px solid black; background-color: black; color: white;">
+                            Healthy Food</h1>
+                    </div>
+                    <a href="#" class="btn">
+                        <img src="assets/healthy food1.jpg" alt="rissole" style="height: 400px;" class="img-fluid">
+                    </a>
+                </div>
+            </div>
+
+        </div><br><br><br>
+
+
+
+
+
+        <!-- this is for owl carousel -->
+        <section class="container-fluid">
+            <div class="text-center">
+                <h1
+                    style="text-align: center; text-decoration: underline 2px solid black; color: white; border: 2px solid black; background-color: black; ">
+                    Best Sellers
+                </h1>
+            </div><br>
+            <div class="owl-carousel" >
+
+
+                <div class="card adjust">
+                    <img src="assets/pasta.jpg" class="card-img-top img-fluid w-100" alt="" style="height: 400px; object-fit: contain;">
+                    <div class="card-body" style="height: 220px;">
+                        <h5 class="card-title">Pasta</h5>
+                        <p class="card-text">Pasta is a traditional Italian food made from wheat and water,
+                            often served with sauces. It comes in various shapes like spaghetti or penne,
+                            offering endless delicious meal possibilities.
+                        </p>
+                        <a href="#" class="btn olive custom">learn more</a>
+                    </div>
+                </div>
+
+
+                <div class="card adjust">
+                    <img src="assets/burger& french fries.jpg" class="card-img-top img-fluid w-100" alt=""
+                        style="height: 400px; object-fit: contain;">
+                    <div class="card-body" style="height: 220px;">
+                        <h5 class="card-title">Burgers & French Fries</h5>
+                        <p class="card-text">Burgers and French fries are classic fast food favorites. Juicy
+                            beef patties in buns paired with crispy, salted fries create a satisfying, flavorful
+                            meal loved worldwide for its convenience and taste.
+                        </p>
+                        <a href="#" class="btn olive custom">learn more</a>
+                    </div>
+
+                </div>
+
+                <div class="card adjust">
+                    <img src="assets/healthy food3.jpg" class="card-img-top img-fluid w-100" alt=""
+                        style="height: 400px; object-fit: contain;">
+                    <div class="card-body" style="height: 220px;">
+                        <h5 class="card-title">Healthy Food</h5>
+                        <p class="card-text">Healthy food includes fruits, vegetables, whole grains, and lean
+                            proteins. It provides essential nutrients, supports energy and immunity, reduces
+                            disease risk, and promotes overall well-being and a balanced lifestyle.
+
+                        </p>
+                        <a href="#" class="btn olive custom">learn more</a>
+                    </div>
+                </div>
+
+
+                <div class="card adjust">
+                    <img src="assets/spaghetti.jpg" class="card-img-top img-fluid w-100" style="height: 400px; object-fit: contain;">
+                    <div class="card-body" style="height: 220px;">
+                        <h5 class="card-title">Spaghetti</h5>
+                        <p class="card-text">Spaghetti is a long, thin pasta popular in Italian cuisine. Often
+                            served with tomato sauce, meatballs, or cheese, it’s a versatile, delicious dish
+                            enjoyed by people around the world.
+
+                        </p>
+                        <a href="#" class="btn olive custom">learn more</a>
+                    </div>
+                </div>
+
+
+            </div>
+        </section><br><br>
+
+
+
+        <!-- This is the card section 
+     First row -->
+        <div class="container-fluid">
+            <div class="row">
+                <h1
+                    style="text-align: center; text-decoration: underline 2px solid black; color: white; border: 2px solid black; background-color: black; ">
+                    Indian Cuisine
+                </h1><br>
+
+
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <div>
+                                <a href="#" class="btn btn-dark olive">
+                                    <img src="assets/indian chole bhature" alt="Chole Bhature" class="img-fluid"
+                                        style="height: 230px; width: 100%;">
+                                </a>
+                            </div>
+                            <h5 class="card-title">Chole Bhature</h5>
+                            <p class="card-text">Chole Bhature is a popular North Indian dish made of spicy chickpeas
+                                (chole) served with deep-fried bread (bhature). It is a heavy, flavorful meal often
+                                enjoyed for breakfast or lunch.
+
+
+                            </p>
+                            <a href="#" class="btn btn-dark olive" style="padding: 5px;">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <div>
+                                <a href="#" class="btn btn-dark olive">
+                                    <img src="assets/indian biryani.jpg" alt="Biryani" class="img-fluid"
+                                        style="height: 230px; width: 100%;">
+                                </a>
+                            </div>
+                            <h5 class="card-title">Biryani</h5>
+                            <p class="card-text">Biryani is a fragrant rice dish cooked with spices, basmati rice, and
+                                meat or vegetables. It is a royal delicacy known for its rich aroma and layered flavors.
+
+                            </p>
+                            <a href="#" class="btn btn-dark olive" style="padding: 5px;">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <div>
+                                <a href="#" class="btn btn-dark olive">
+                                    <img src="assets/indian dosa.jpg" alt="Dosa" class="img-fluid"
+                                        style="height: 230px; width: 100%;">
+                                </a>
+                            </div>
+                            <h5 class="card-title">Dosa</h5>
+                            <p class="card-text">Dosa is a thin, crispy South Indian pancake made from fermented rice
+                                and urad dal batter. It is typically served with sambar and coconut chutney.
+
+                            </p>
+                            <a href="#" class="btn btn-dark olive" style="padding: 5px;">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <div>
+                                <a href="#" class="btn btn-dark olive">
+                                    <img src="assets/indian-poha.jpg" alt="Poha" class="img-fluid"
+                                        style="height: 230px; width: 100%;">
+                                </a>
+                            </div>
+                            <h5 class="card-title">Poha</h5>
+                            <p class="card-text">Poha is a light and nutritious breakfast dish made from flattened rice,
+                                onions, and mild spices. It is quick to prepare and commonly eaten in Maharashtra
+                                and Madhya Pradesh.
+                            </p>
+                            <a href="#" class="btn btn-dark olive" style="padding: 5px;">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div><br><br>
+
+
+        <!-- Second row -->
+        <div class="container-fluid">
+            <div class="row" style="margin-top:10px; margin-bottom: 10px;">
+                <h1
+                    style="text-align: center; text-decoration: underline 2px solid black; color: white; border: 2px solid black; background-color: black; ">
+                    Italian
+                    Cuisine</h1>
+
+
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <div>
+                                <a href="#" class="btn btn-dark olive">
+                                    <img src="assets/italian-pasta.jpg" class="img-fluid"
+                                        style="height: 230px; width: 100%;">
+                                </a>
+                            </div>
+                            <h5 class="card-title">Penne Pasta</h5>
+                            <p class="card-text">A popular Italian dish made with penne-shaped pasta tossed in a rich
+                                tomato-based sauce, often garnished with herbs and vegetables.
+
+
+                            </p>
+                            <a href="#" class="btn btn-dark olive" style="padding: 5px;">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <div>
+                                <a href="#" class="btn btn-dark olive">
+                                    <img src="assets/italian-pizza.jpg" class="img-fluid"
+                                        style="height: 230px; width: 100%;">
+                                </a>
+                            </div>
+                            <h5 class="card-title">Vegetarian Pizza</h5>
+                            <p class="card-text">A classic pizza topped with cheese, olives, capsicum, and herbs. It’s
+                                baked to perfection with a crispy crust and melted cheese.
+
+
+                            </p>
+                            <a href="#" class="btn btn-dark olive" style="padding: 5px;">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <div>
+                                <a href="#" class="btn btn-dark olive">
+                                    <img src="assets/italian-spaghetti.jpg" class="img-fluid"
+                                        style="height: 230px; width: 100%;">
+                                </a>
+                            </div>
+                            <h5 class="card-title">Spaghetti</h5>
+                            <p class="card-text">Long pasta strands served with a tangy tomato sauce and garnished with
+                                herbs, making it a simple yet flavorful Italian favorite.
+
+                            </p>
+                            <a href="#" class="btn btn-dark olive" style="padding: 5px;">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <div>
+                                <a href="#" class="btn btn-dark olive">
+                                    <img src="assets/italian tiramisu1.jpg" class="img-fluid"
+                                        style="height: 230px; width: 100%;">
+                                </a>
+                            </div>
+                            <h5 class="card-title">Tiramisu</h5>
+                            <p class="card-text">A traditional Italian dessert made with layers of coffee-soaked
+                                ladyfingers, mascarpone cheese, and cocoa powder.
+
+                            </p>
+                            <a href="#" class="btn btn-dark olive" style="padding: 5px;">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div><br><br>
+
+
+        <!-- Third row -->
+        <div class="container-fluid">
+            <div class="row">
+
+                <h1
+                    style="text-align: center; text-decoration: underline 2px solid black; color: white; border: 2px solid black; background-color: black;">
+                    Chinese
+                    Cuisines</h1>
+
+
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <div>
+                                <a href="#" class="btn btn-dark olive">
+                                    <img src="assets/chinease chowmein.jpg" class="img-fluid"
+                                        style="height: 230px; width: 100%;">
+                                </a>
+                            </div>
+                            <h5 class="card-title">Hakka Noodles</h5>
+                            <p class="card-text">Stir-fried noodles with vegetables and Chinese sauces. It’s a beloved
+                                Indo-Chinese street food known for its spicy, savory flavor.
+
+
+                            </p>
+                            <a href="#" class="btn btn-dark olive" style="padding: 5px;">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <div>
+                                <a href="#" class="btn btn-dark olive">
+                                    <img src="assets/chinease dim sum.jpg" class="img-fluid"
+                                        style="height: 230px; width: 100%;">
+                                </a>
+                            </div>
+                            <h5 class="card-title">Steamed Dumplings</h5>
+                            <p class="card-text">Soft dumplings filled with veggies or meat, steamed and served with
+                                soy-based dipping sauce. A popular appetizer in Chinese cuisine.
+
+                            </p>
+                            <a href="#" class="btn btn-dark olive" style="padding: 5px;">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <div>
+                                <a href="#" class="btn btn-dark olive">
+                                    <img src="assets/chinease fried rice.jpg" class="img-fluid"
+                                        style="height: 230px; width: 100%;">
+                                </a>
+                            </div>
+                            <h5 class="card-title">Fried Rice</h5>
+                            <p class="card-text">A wok-tossed rice dish with vegetables, soy sauce, and sometimes egg or
+                                meat. It’s flavorful and often paired with gravy dishes.
+
+
+                            </p>
+                            <a href="#" class="btn btn-dark olive" style="padding: 5px;">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <div>
+                                <a href="#" class="btn btn-dark olive">
+                                    <img src="assets/chinease tofu.jpg" class="img-fluid"
+                                        style="height: 230px; width: 100%;">
+                                </a>
+                            </div>
+                            <h5 class="card-title">Tofu Stir Fry</h5>
+                            <p class="card-text">
+                                A healthy dish with tofu cubes stir-fried with vegetables in soy and garlic sauce. It’s
+                                both nutritious and delicious.
+
+                            </p>
+                            <a href="#" class="btn btn-dark olive" style="padding: 5px;">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><br><br>
+
+
+
+        <!-- This is the Dishes section -->
+        <div class="container overflow-hidden text-center">
+      <div class="row gy-5">
+        <h1
+          style="text-align: center; text-decoration: underline 2px solid black; color: white; border: 2px solid black; background-color: black;">
+          Dishes</h1>
+
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+          <div class="hovereffect">
+            <img class="img-responsive img-fluid" src="assets/pexels-robinstickel-70497.jpg" alt="">
+            <div class="overlay">
+              <h2>Burger & French Fries</h2>
+              <a class="info" href="#">link here</a>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+          <div class="hovereffect">
+            <img class="img-responsive img-fluid" src="assets/pexels-sheenawood-574111.jpg" alt="">
+            <div class="overlay">
+              <h2>Pancakes</h2>
+              <a class="info" href="#">link here</a>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+          <div class="hovereffect">
+            <img class="img-responsive img-fluid " src="assets/pexels-cristian-rojas-8230026.jpg" alt="">
+            <div class="overlay">
+              <h2>Healthy Veggies Sandwiches</h2>
+              <a class="info" href="#">link here</a>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+          <div class="hovereffect">
+            <img class="img-responsive img-fluid" src="assets/pexels-chanwalrus-941869.jpg" alt="">
+            <div class="overlay">
+              <h2>Dosa</h2>
+              <a class="info" href="#">link here</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
+
+
+    </main><br><br><br>
+
+
+    <!-- the footer is start from here -->
+    <footer class="site-footer ">
+        <div class="container-fluid py-5 ">
+            <div class="row">
+                <div class="col col-md-4 col-lg-3 mb-4">
+                    <h5 class="text-uppercase">Recipes</h5>
+                    <p class="small">
+                        Food is essential for life, providing the energy and nutrients our bodies need to function.
+                        It also brings people together, offering enjoyment, comfort, and cultural connection.
+                    </p>
+                </div>
+                <div class="col col-md-4 col-lg-3 mb-4">
+                    <h5 class="text-uppercase">Section</h5>
+                    <ul class="list-unstyled small">
+                        <li><a href="#" class="text-light text-decoration-none">Home</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Serving Suggestions</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Storage Tips</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Variations</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Personal Touch</a></li>
+                    </ul>
+                </div>
+                <div class="col col-md-4 col-lg-3 mb-4">
+                    <h5 class="text-uppercase">Community</h5>
+                    <ul class="list-unstyled small">
+                        <li><a href="#" class="text-light text-decoration-none">Call to Action</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Social Media Links</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Sponsors</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Positive Message</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Customer Care</a></li>
+                    </ul>
+                </div>
+                <div class="col col-md-4 col-lg-3 mb-4">
+                    <h5 class="text-uppercase"><i class="fa fa-circle-user"> Contact Us</i></h5>
+                    <ul class="list-unstyled small">
+                        <li><a href="#" class="text-light text-decoration-none">
+                                <i class="fa fa-phone"> 9770586482</i>
+                            </a></li>
+                        <li><a href="#" class="text-light text-decoration-none">
+                                <i class="fa-brands fa-whatsapp"> 9770586482</i>
+                            </a></li>
+                        <li><a href="#" class="text-light text-decoration-none">
+                                <i class="fa-brands fa-instagram"> Foodies</i>
+                            </a></li>
+
+                        <li><a href="#" class="text-light text-decoration-none">
+                                <i class="fa-brands fa-facebook"> Foodies</i>
+                            </a></li>
+                        <li><a href="#" class="text-light text-decoration-none">
+                                <i class="fas fa-info-circle"> Customer Care</i>
+                            </a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <blockquote class="blockquote">
+                    <p class="mb-1">"Together, we share, support, and grow as a community."</p><br>
+                    <footer class="blockquote-footer text-light">Foodie's <cite title="India"
+                            style="font-style: italic;">The Taste of India</cite>
+                    </footer>
+                </blockquote>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+
+    <!-- this is for owl carousel script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $(".owl-carousel").owlCarousel({
+                loop: true,
+                autoplay: true,
+                margin: 20,
+                nav: false,
+                dots: true,
+                responsive: {
+                    0: { items: 1 },
+                    600: { items: 2 },
+                    1000: { items: 3 }
+                }
+            });
+        });
+
+    </script>
 
 </body>
 
