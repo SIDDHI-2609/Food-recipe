@@ -49,8 +49,9 @@
         .content {
             height: auto;
             /* background-color: rgb(98, 96, 96); */
-            padding-top: 80px;
+            padding-top: 60px;
             text-align: center;
+            font-size: large;
         }
 
 
@@ -315,6 +316,32 @@
             color: white;
             margin: 20px 20px 20px 20px;
         }
+
+        /* this is for h1 tag */
+        .scale-h1 {
+            text-align: center;
+            text-decoration: underline 2px solid black;
+            color: white;
+            border: 2px solid black;
+            background-color: black;
+        }
+
+
+        /* this is for we are here for you section */
+        .contact-card {
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+            padding: 20px;
+            margin-top: 50px;
+        }
+
+        .info-item {
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+        }
     </style>
 </head>
 
@@ -397,7 +424,7 @@
                         </form>
 
                         <a href="#SignUp" class="nav-link" style="color: white;">
-                           <i class="fa-regular fa-circle-user"></i> SignUp
+                            <i class="fa-regular fa-circle-user"></i> SignUp
                         </a>
                     </div>
 
@@ -783,8 +810,7 @@
         <!-- this is for owl carousel -->
         <section class="container-fluid">
             <div class="text-center">
-                <h1
-                    style="text-align: center; text-decoration: underline 2px solid black; color: white; border: 2px solid black; background-color: black; ">
+                <h1 class="scale-h1">
                     Best Sellers
                 </h1>
             </div><br>
@@ -858,8 +884,7 @@
      First row -->
         <div class="container-fluid">
             <div class="row">
-                <h1
-                    style="text-align: center; text-decoration: underline 2px solid black; color: white; border: 2px solid black; background-color: black; ">
+                <h1 class="scale-h1">
                     Indian Cuisine
                 </h1><br>
 
@@ -952,8 +977,7 @@
         <!-- Second row -->
         <div class="container-fluid">
             <div class="row" style="margin-top:10px; margin-bottom: 10px;">
-                <h1
-                    style="text-align: center; text-decoration: underline 2px solid black; color: white; border: 2px solid black; background-color: black; ">
+                <h1 class="scale-h1">
                     Italian
                     Cuisine</h1>
 
@@ -1047,9 +1071,8 @@
         <div class="container-fluid">
             <div class="row">
 
-                <h1
-                    style="text-align: center; text-decoration: underline 2px solid black; color: white; border: 2px solid black; background-color: black;">
-                    Chinese
+                <h1 class="scale-h1">
+                   Chinese
                     Cuisines</h1>
 
 
@@ -1285,7 +1308,59 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section><br><br>
+
+
+    <section>
+        <div class="container">
+            <div class="row">
+                <h1 style="text-decoration: underline; text-shadow: grey; text-align: center;">We are here for you</h1><br>
+                <div class="col-6">
+
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d424.2520960414644!2d81.95795823210524!3d20.349652666293476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1749029810490!5m2!1sen!2sin"
+                        width="600" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+                <div class="col-md-6">
+                    <div class="contact-card p-4">
+
+
+                        <div class="info-item mb-3">
+                            <i class="bi bi-geo-alt-fill me-2 text-primary"></i>
+                            <span><strong>Address:</strong> Bus stand Nagri</span>
+                        </div>
+
+                        <div class="info-item mb-3">
+                            <i class="bi bi-telephone-fill me-2 text-success"></i>
+                            <span><strong>Phone:</strong> +91 9770586482</span>
+                        </div>
+
+                        <div class="info-item mb-3">
+                            <i class="bi bi-envelope-fill me-2 text-danger"></i>
+                            <span><strong>Email:</strong> Foodies@xyz.com</span>
+                        </div>
+
+                        <div class="info-item mb-3">
+                            <i class="bi bi-youtube me-2 text-danger"></i>
+                            <span><strong>YouTube:</strong>Foodies.com</span>
+                        </div>
+
+                        <div class="info-item mb-3">
+                            <i class="bi bi-instagram me-2 text-warning"></i>
+                            <span><strong>Instagram:</strong> Foodies</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Map Section (keep your existing map here) -->
+
+            </div>
+        </div>
+    </section><br><br>
+
+
 
 
 
