@@ -31,6 +31,29 @@
 
 
     <style>
+        /* login sections */
+
+
+        .parallax {
+            /* the image used */
+            background-image: url('assets/burger.jpg');
+            /* set a specific height */
+            min-height: 500px;
+            /* create the parallax scrolling effect */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .content {
+            height: auto;
+            /* background-color: rgb(98, 96, 96); */
+            padding-top: 80px;
+            text-align: center;
+        }
+
+
         .column {
             float: left;
             width: 50%;
@@ -45,6 +68,10 @@
             margin: 0%;
             padding: 0%;
 
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         /* this is for footer section */
@@ -142,6 +169,7 @@
         .cream {
             background-color: white;
             color: black;
+
         }
 
         .cream:hover {
@@ -266,6 +294,13 @@
             transition-delay: 0.3s;
         }
 
+        /* this is for p tag in dishes section */
+        .least {
+            color: white;
+            text-align: center;
+            padding: 50px;
+        }
+
         /* this is for button of bestsellers(owl carousel) */
         .custom {
             height: 35px;
@@ -355,10 +390,17 @@
                             <a class="nav-link disabled" aria-disabled="true" style="color: white;">Disabled</a>
                         </li>
                     </ul>
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                        <button class="btn cream" type="submit">Search</button>
-                    </form>
+                    <div class="d-flex align-items-center">
+                        <form class="d-flex me-3" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                            <button class="btn cream" type="submit">Search</button>
+                        </form>
+
+                        <a href="#SignUp" class="nav-link" style="color: white;">
+                           <i class="fa-regular fa-circle-user"></i> SignUp
+                        </a>
+                    </div>
+
                 </div>
             </div>
         </nav>
@@ -719,14 +761,18 @@
 
                 </div>
 
+
+
                 <div class="col-lg-6 col-md-12 col-sm-12">
                     <div>
                         <h1 class="neat">Healthy Food</h1>
                     </div>
                     <a href="#" class="btn">
-                        <img src="assets/healthy food2.jpg" alt="south indian" style="height: 400px; width: 900px;" class="img-fluid">
+                        <img src="assets/healthy food2.jpg" alt="south indian" style="height: 400px; width: 900px;"
+                            class="img-fluid">
                     </a>
                 </div>
+
             </div>
         </div><br><br><br>
 
@@ -1104,6 +1150,10 @@
                         <img class="img-responsive img-fluid" src="assets/pexels-robinstickel-70497.jpg" alt="">
                         <div class="overlay">
                             <h2>Burger & French Fries</h2>
+                            <p class="least">The savory flavors of the burger and the crunchy texture of the fries
+                                create a delightful
+                                culinary experience. Whether it's a quick snack or a meal, this duo never fails to hit
+                                the spot!</p>
                             <a class="info" href="#">link here</a>
                         </div>
                     </div>
@@ -1115,6 +1165,10 @@
                         <img class="img-responsive img-fluid" src="assets/pexels-sheenawood-574111.jpg" alt="">
                         <div class="overlay">
                             <h2>Pancakes</h2>
+                            <p class="least">Fluffy pancakes, golden brown and sweet,
+                                A breakfast treat that's always a treat.
+                                Topped with syrup, fruit, or whipped cream,
+                                A delicious delight that's the perfect dream!</p>
                             <a class="info" href="#">link here</a>
                         </div>
                     </div>
@@ -1126,6 +1180,10 @@
                         <img class="img-responsive img-fluid " src="assets/pexels-cristian-rojas-8230026.jpg" alt="">
                         <div class="overlay">
                             <h2>Healthy Veggies Sandwiches</h2>
+                            <p class="least">Fresh veggies, crunchy and bright,
+                                In a sandwich, a healthy delight.
+                                Avocado, sprouts, and lettuce too,
+                                A nutritious meal, perfect for you!</p>
                             <a class="info" href="#">link here</a>
                         </div>
                     </div>
@@ -1138,6 +1196,10 @@
                         <img class="img-responsive img-fluid" src="assets/pexels-chanwalrus-941869.jpg" alt="">
                         <div class="overlay">
                             <h2>Dosa</h2>
+                            <p class="least">Crispy dosa, a South Indian delight,
+                                Savoring the flavors, morning, noon, or night.
+                                With sambar and chutney, a perfect pair,
+                                A delicious and satisfying meal beyond compare!</p>
                             <a class="info" href="#">link here</a>
                         </div>
                     </div>
@@ -1147,6 +1209,84 @@
 
 
     </main><br><br><br>
+
+
+    <!-- login sections -->
+    <section id="SignUp">
+        <div class="parallax">
+            <div class="content">
+                <div class="container mt-5">
+                    <div class="card">
+                        <div class="card-title">
+                            <h1>SignUp section</h1>
+                        </div>
+                        <div class="card-body">
+                            <form class="row needs-validation" novalidate>
+                                <div class="col-md-4">
+                                    <label for="validationCustom01" class="form-label">First name</label>
+                                    <input type="text" class="form-control" id="validationCustom01"
+                                        placeholder="Enter your first name: " required>
+                                    <div class="valid-feedback">
+                                        Looks good
+                                    </div>
+                                </div> <br><br>
+
+                                <div class="col-md-4">
+                                    <label for="validationCustom02" class="form-label">Last name</label>
+                                    <input type="text" class="form-control" id="validationCustom02"
+                                        placeholder="Enter your last name: " required>
+                                    <div class="valid-feedback">
+                                        Looks good
+                                    </div>
+                                </div><br><br>
+
+                                <div class="col-md-4">
+                                    <label for="validationCustom03" class="form-label">City</label>
+                                    <input type="text" class="form-control" id="validationCustom03"
+                                        placeholder="Enter your city name: " required>
+                                    <div class="invalid-feedback">
+                                        Please provide a valid city
+                                    </div>
+                                </div><br><br>
+
+                                <div class="col-12">
+                                    <label for="validationCustom04" class="form-label">State</label>
+                                    <select id="validationCustom04" class="form-select" required>
+                                        <option selected disabled value="">Choose...</option>
+                                        <option>Chhattisgarh</option>
+                                        <option>Maharastra</option>
+                                        <option>Gujrat</option>
+                                        <option>Karnataka</option>
+                                        <option>Andhra Pradesh</option>
+                                    </select>
+                                    <div class="invalid-feedback">
+                                        please select a valid state.
+                                    </div>
+                                </div><br><br>
+
+
+                                <div class="col-3">
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="invalidCheck" required>
+                                        <label for="invalidCheck" class="form-check-label" style="text-align: left;">
+                                            Agree to terms and conditions
+                                        </label>
+                                        <div class="invalid-feedback">
+                                            You must agree before submitting.
+                                        </div>
+                                    </div>
+                                </div><br><br>
+                                <div class="col-12">
+                                    <button class="btn btn-dark cream" type="submit">Submit form</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
 
 
     <!-- the footer is start from here -->
@@ -1242,6 +1382,24 @@
             });
         });
 
+    </script>
+
+    <script>
+        (() => {
+            'use strict'
+            const forms = document.querySelectorAll('.needs-validation')
+
+            Array.form(forms).forEach(form => {
+                form.addEventListener('submit', event => {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
+
+                    form.classList.add('was-validated')
+                }, false)
+            })
+        })()
     </script>
 
 </body>
