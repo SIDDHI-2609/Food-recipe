@@ -19,7 +19,7 @@
 
     <!-- this is for font awesome...footer part logo of contact us -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
 
     <!-- this is for owl carousel  -->
     <link rel="stylesheet"
@@ -342,6 +342,31 @@
             display: flex;
             align-items: center;
         }
+
+        /* This is for whatsapp icon */
+        .whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    color: white;
+    border-radius: 50%;
+    padding: 15px;
+    font-size: 25px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    text-align: center;
+}
+
+.whatsapp-float:hover {
+    background-color: #20b358;
+    color: white;
+    text-decoration: none;
+}
+
+.whatsapp-icon {
+    display: block;
+}
+
     </style>
 </head>
 
@@ -354,7 +379,7 @@
             <div class="container-fluid">
                 <div>
                     <a href="index1.html" class="nav-link">
-                        <img src="assets/foodie.png" alt="logo" style="width: 60px; margin: 20px;" class="img-fluid">
+                        <img src="assets/foodie.png" alt="logo" style="width: 60px; margin: 20px;" class="img-fluid" loading="lazy">
                     </a>
                 </div>
                 <pre>   </pre>
@@ -460,14 +485,14 @@
                         <div class="carousel-inner">
                             <div class="carousel-item active" data-bs-interval="10000">
                                 <a href="#">
-                                    <img src="assets/foodies banner.png" class="img-fluid" alt="healthy food"
+                                    <img src="assets/foodies banner.png" class="img-fluid" alt="healthy food" loading="lazy"
                                         style="display: block; margin: auto; height: auto;">
                                 </a>
 
                             </div>
                             <div class="carousel-item" data-bs-interval="2000">
                                 <a href="#">
-                                    <img src="assets/pexels-askar-abayev-5638333.jpg" class="img-fluid" alt="cusine"
+                                    <img src="assets/pexels-askar-abayev-5638333.jpg" class="img-fluid" alt="cusine" loading="lazy"
                                         style="display: block; margin: auto; height: auto">
                                 </a>
                                 <div class="carousel-caption d-none d-md-block">
@@ -477,7 +502,7 @@
                             </div>
                             <div class="carousel-item">
                                 <a href="#">
-                                    <img src="assets/pexels-enginakyurt-2725744.jpg" class="img-fluid" alt="fast food"
+                                    <img src="assets/pexels-enginakyurt-2725744.jpg" class="img-fluid" alt="fast food" loading="lazy"
                                         style="display: block; margin: auto; height: auto;">
                                 </a>
                                 <div class="carousel-caption d-none d-md-block">
@@ -487,7 +512,7 @@
                             </div>
                             <div class="carousel-item">
                                 <a href="#">
-                                    <img src="assets/pexels-ash-craig-122861-376464.jpg" class="img-fluid"
+                                    <img src="assets/pexels-ash-craig-122861-376464.jpg" class="img-fluid" loading="lazy"
                                         alt="fast food" style="display: block; margin: auto; height: auto">
                                 </a>
                                 <div class="carousel-caption d-none d-md-block">
@@ -497,7 +522,7 @@
                             </div>
                             <div class="carousel-item">
                                 <a href="#" class="btn ">
-                                    <img src="assets/pexels-cristian-rojas-8230026.jpg" class="img-fluid"
+                                    <img src="assets/pexels-cristian-rojas-8230026.jpg" class="img-fluid" loading="lazy"
                                         alt="fast food"
                                         style="display: block; margin: auto; height: auto; width: 100%;">
                                 </a>
@@ -551,7 +576,7 @@
                 <div class="col-lg-3 col-md-6 col-sm-12" style="padding: 5px;">
                     <div class="card h-100">
                         <a href="#" class="btn">
-                            <img src="assets/vegeterian food 1.jpg" alt="image" class="img-fluid w-100"
+                            <img src="assets/vegeterian food 1.jpg" alt="image" class="img-fluid w-100" loading="lazy"
                                 style="height: 400px;">
                         </a>
 
@@ -571,7 +596,7 @@
                 <div class="col-lg-3 col-md-6 col-sm-12" style="padding: 5px;">
                     <div class="card h-100">
                         <a href="#" class="btn">
-                            <img src="assets/pizza.jpg" alt="image" class="img-fluid w-100" style="height: 400px;">
+                            <img src="assets/pizza.jpg" alt="image" class="img-fluid w-100" style="height: 400px;" loading="lazy">
                         </a>
 
                         <div class="card-body">
@@ -590,7 +615,7 @@
                     <div class="card h-100">
                         <a href="#" class="btn">
 
-                            <img src="assets/ff burger.jpg" alt="image" class="img-fluid w-100" style="height: 400px;">
+                            <img src="assets/ff burger.jpg" alt="image" class="img-fluid w-100" style="height: 400px;" loading="lazy">
                         </a>
 
                         <div class="card-body">
@@ -608,7 +633,7 @@
                 <div class="col-lg-3 col-md-6 col-sm-12" style="padding: 5px;">
                     <div class="card h-100">
                         <a href="#" class="btn">
-                            <img src="assets/Tandoori chicken.jpg" alt="image" class="img-fluid w-100"
+                            <img src="assets/Tandoori chicken.jpg" alt="image" class="img-fluid w-100" loading="lazy"
                                 style="height: 400px;">
                         </a>
 
@@ -649,7 +674,7 @@
                                         <a href="#" class="btn btn-dark olive">
                                             <img src="assets/pexels-markus-winkler-1430818-3858270.jpg"
                                                 class="card-img-top img-fluid" alt="Card 1"
-                                                style="height: auto; object-fit: contain;">
+                                                style="height: auto; object-fit: contain;" loading="lazy">
                                         </a>
 
 
@@ -683,7 +708,7 @@
                                 <div class="carousel-item">
                                     <div class="card w-100">
                                         <a href="#" class="btn btn-dark olive">
-                                            <img src="assets/pexels-prabal-9609860.jpg" class="card-img-top img-fluid"
+                                            <img src="assets/pexels-prabal-9609860.jpg" class="card-img-top img-fluid" loading="lazy"
                                                 alt="Card 2" style="height: auto;">
                                         </a>
                                         <div class="card-body">
@@ -714,7 +739,7 @@
                                 <div class="carousel-item">
                                     <div class="card w-100">
                                         <a href="#" class="btn btn-dark olive">
-                                            <img src="assets/pexels-chanwalrus-941869.jpg"
+                                            <img src="assets/pexels-chanwalrus-941869.jpg" loading="lazy"
                                                 class="card-img-top img-fluid" alt="Card 3" style="height: auto;">
                                         </a>
                                         <div class="card-body">
@@ -782,7 +807,7 @@
                         <h1 class="neat">Special Thali</h1>
                     </div>
                     <a href="#" class="btn">
-                        <img src="assets/delicious-food-table.jpg" alt="south indian" style="height: 400px;"
+                        <img src="assets/delicious-food-table.jpg" alt="south indian" style="height: 400px;" loading="lazy"
                             class="img-fluid">
                     </a>
 
@@ -795,7 +820,7 @@
                         <h1 class="neat">Healthy Food</h1>
                     </div>
                     <a href="#" class="btn">
-                        <img src="assets/healthy food2.jpg" alt="south indian" style="height: 400px; width: 900px;"
+                        <img src="assets/healthy food2.jpg" alt="south indian" style="height: 400px; width: 900px;" loading="lazy"
                             class="img-fluid">
                     </a>
                 </div>
@@ -818,7 +843,7 @@
 
 
                 <div class="card adjust">
-                    <img src="assets/pasta.jpg" class="card-img-top img-fluid w-100" alt=""
+                    <img src="assets/pasta.jpg" class="card-img-top img-fluid w-100" alt="" loading="lazy"
                         style="height: 400px; object-fit: contain;">
                     <div class="card-body" style="height: 220px;">
                         <h5 class="card-title">Pasta</h5>
@@ -832,7 +857,7 @@
 
 
                 <div class="card adjust">
-                    <img src="assets/burger& french fries.jpg" class="card-img-top img-fluid w-100" alt=""
+                    <img src="assets/burger& french fries.jpg" class="card-img-top img-fluid w-100" alt="" loading="lazy"
                         style="height: 400px; object-fit: contain;">
                     <div class="card-body" style="height: 220px;">
                         <h5 class="card-title">Burgers & French Fries</h5>
@@ -846,7 +871,7 @@
                 </div>
 
                 <div class="card adjust">
-                    <img src="assets/healthy food3.jpg" class="card-img-top img-fluid w-100" alt=""
+                    <img src="assets/healthy food3.jpg" class="card-img-top img-fluid w-100" alt="" loading="lazy"
                         style="height: 400px; object-fit: contain;">
                     <div class="card-body" style="height: 220px;">
                         <h5 class="card-title">Healthy Food</h5>
@@ -861,7 +886,7 @@
 
 
                 <div class="card adjust">
-                    <img src="assets/spaghetti.jpg" class="card-img-top img-fluid w-100"
+                    <img src="assets/spaghetti.jpg" class="card-img-top img-fluid w-100" loading="lazy"
                         style="height: 400px; object-fit: contain;">
                     <div class="card-body" style="height: 220px;">
                         <h5 class="card-title">Spaghetti</h5>
@@ -894,7 +919,7 @@
                         <div class="card-body">
                             <div>
                                 <a href="#" class="btn btn-dark olive">
-                                    <img src="assets/indian chole bhature" alt="Chole Bhature" class="img-fluid"
+                                    <img src="assets/indian chole bhature" alt="Chole Bhature" class="img-fluid" loading="lazy"
                                         style="height: 230px; width: 100%;">
                                 </a>
                             </div>
@@ -916,7 +941,7 @@
                         <div class="card-body">
                             <div>
                                 <a href="#" class="btn btn-dark olive">
-                                    <img src="assets/indian biryani.jpg" alt="Biryani" class="img-fluid"
+                                    <img src="assets/indian biryani.jpg" alt="Biryani" class="img-fluid" loading="lazy"
                                         style="height: 230px; width: 100%;">
                                 </a>
                             </div>
@@ -936,7 +961,7 @@
                         <div class="card-body">
                             <div>
                                 <a href="#" class="btn btn-dark olive">
-                                    <img src="assets/indian dosa.jpg" alt="Dosa" class="img-fluid"
+                                    <img src="assets/indian dosa.jpg" alt="Dosa" class="img-fluid" loading="lazy"
                                         style="height: 230px; width: 100%;">
                                 </a>
                             </div>
@@ -955,7 +980,7 @@
                         <div class="card-body">
                             <div>
                                 <a href="#" class="btn btn-dark olive">
-                                    <img src="assets/indian-poha.jpg" alt="Poha" class="img-fluid"
+                                    <img src="assets/indian-poha.jpg" alt="Poha" class="img-fluid" loading="lazy"
                                         style="height: 230px; width: 100%;">
                                 </a>
                             </div>
@@ -987,7 +1012,7 @@
                         <div class="card-body">
                             <div>
                                 <a href="#" class="btn btn-dark olive">
-                                    <img src="assets/italian-pasta.jpg" class="img-fluid"
+                                    <img src="assets/italian-pasta.jpg" class="img-fluid" loading="lazy"
                                         style="height: 230px; width: 100%;">
                                 </a>
                             </div>
@@ -1008,7 +1033,7 @@
                         <div class="card-body">
                             <div>
                                 <a href="#" class="btn btn-dark olive">
-                                    <img src="assets/italian-pizza.jpg" class="img-fluid"
+                                    <img src="assets/italian-pizza.jpg" class="img-fluid" loading="lazy"
                                         style="height: 230px; width: 100%;">
                                 </a>
                             </div>
@@ -1029,7 +1054,7 @@
                         <div class="card-body">
                             <div>
                                 <a href="#" class="btn btn-dark olive">
-                                    <img src="assets/italian-spaghetti.jpg" class="img-fluid"
+                                    <img src="assets/italian-spaghetti.jpg" class="img-fluid" loading="lazy"
                                         style="height: 230px; width: 100%;">
                                 </a>
                             </div>
@@ -1048,7 +1073,7 @@
                         <div class="card-body">
                             <div>
                                 <a href="#" class="btn btn-dark olive">
-                                    <img src="assets/italian tiramisu1.jpg" class="img-fluid"
+                                    <img src="assets/italian tiramisu1.jpg" class="img-fluid" loading="lazy"
                                         style="height: 230px; width: 100%;">
                                 </a>
                             </div>
@@ -1081,7 +1106,7 @@
                         <div class="card-body">
                             <div>
                                 <a href="#" class="btn btn-dark olive">
-                                    <img src="assets/chinease chowmein.jpg" class="img-fluid"
+                                    <img src="assets/chinease chowmein.jpg" class="img-fluid" loading="lazy"
                                         style="height: 230px; width: 100%;">
                                 </a>
                             </div>
@@ -1102,7 +1127,7 @@
                         <div class="card-body">
                             <div>
                                 <a href="#" class="btn btn-dark olive">
-                                    <img src="assets/chinease dim sum.jpg" class="img-fluid"
+                                    <img src="assets/chinease dim sum.jpg" class="img-fluid" loading="lazy"
                                         style="height: 230px; width: 100%;">
                                 </a>
                             </div>
@@ -1122,7 +1147,7 @@
                         <div class="card-body">
                             <div>
                                 <a href="#" class="btn btn-dark olive">
-                                    <img src="assets/chinease fried rice.jpg" class="img-fluid"
+                                    <img src="assets/chinease fried rice.jpg" class="img-fluid" loading="lazy"
                                         style="height: 230px; width: 100%;">
                                 </a>
                             </div>
@@ -1142,7 +1167,7 @@
                         <div class="card-body">
                             <div>
                                 <a href="#" class="btn btn-dark olive">
-                                    <img src="assets/chinease tofu.jpg" class="img-fluid"
+                                    <img src="assets/chinease tofu.jpg" class="img-fluid" loading="lazy"
                                         style="height: 230px; width: 100%;">
                                 </a>
                             </div>
@@ -1170,7 +1195,7 @@
 
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                     <div class="hovereffect">
-                        <img class="img-responsive img-fluid" src="assets/pexels-robinstickel-70497.jpg" alt="">
+                        <img class="img-responsive img-fluid" src="assets/pexels-robinstickel-70497.jpg" alt="" loading="lazy">
                         <div class="overlay">
                             <h2>Burger & French Fries</h2>
                             <p class="least">The savory flavors of the burger and the crunchy texture of the fries
@@ -1185,7 +1210,7 @@
 
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                     <div class="hovereffect">
-                        <img class="img-responsive img-fluid" src="assets/pexels-sheenawood-574111.jpg" alt="">
+                        <img class="img-responsive img-fluid" src="assets/pexels-sheenawood-574111.jpg" alt="" loading="lazy">
                         <div class="overlay">
                             <h2>Pancakes</h2>
                             <p class="least">Fluffy pancakes, golden brown and sweet,
@@ -1200,7 +1225,7 @@
 
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                     <div class="hovereffect">
-                        <img class="img-responsive img-fluid " src="assets/pexels-cristian-rojas-8230026.jpg" alt="">
+                        <img class="img-responsive img-fluid " src="assets/pexels-cristian-rojas-8230026.jpg" alt="" loading="lazy">
                         <div class="overlay">
                             <h2>Healthy Veggies Sandwiches</h2>
                             <p class="least">Fresh veggies, crunchy and bright,
@@ -1216,7 +1241,7 @@
 
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                     <div class="hovereffect">
-                        <img class="img-responsive img-fluid" src="assets/pexels-chanwalrus-941869.jpg" alt="">
+                        <img class="img-responsive img-fluid" src="assets/pexels-chanwalrus-941869.jpg" alt="" loading="lazy">
                         <div class="overlay">
                             <h2>Dosa</h2>
                             <p class="least">Crispy dosa, a South Indian delight,
@@ -1311,6 +1336,8 @@
     </section><br><br>
 
 
+
+    <!-- this is for iframe section -->
     <section>
         <div class="container">
             <div class="row">
@@ -1441,6 +1468,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
+
+    <!-- this script is for owl carousel -->
     <script>
         $(document).ready(function () {
             $(".owl-carousel").owlCarousel({
@@ -1459,12 +1488,14 @@
 
     </script>
 
+
+<!-- this script is for form -->
     <script>
         (() => {
             'use strict'
-            const forms = document.querySelectorAll('.needs-validation')
+            const forms = document.querySelectorAll('.needs-validation');
 
-            Array.form(forms).forEach(form => {
+            Array.from(forms).forEach(form => {
                 form.addEventListener('submit', event => {
                     if (!form.checkValidity()) {
                         event.preventDefault()
@@ -1472,10 +1503,27 @@
                     }
 
                     form.classList.add('was-validated')
-                }, false)
-            })
-        })()
+                }, false);
+            });
+        })();
     </script>
+
+
+<!-- this is for image loading lazy -->
+ <!-- <script>
+  document.querySelectorAll('img').forEach(img => {
+    img.setAttribute('loading', 'lazy');
+  });
+</script> -->
+
+
+<a href="https://wa.me/919999999999?text=Hello%2C%20I%20am%20interested%20in%20your%20products." 
+   class="whatsapp-float" 
+   target="_blank">
+  <i class= "fa-brands fa-whatsapp"></i>
+</a>
+
+
 
 </body>
 
